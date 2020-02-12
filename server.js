@@ -1,9 +1,12 @@
 const express = require('express');
 const layouts = require('express-ejs-layouts');
+const methodOverride = require('method-override');
 
 const app = express();
 app.set( 'view engine', 'ejs');
 app.use(layouts);
+app.use(express.urlencoded({extended: false}));
+app.use(methodOverride('_method'));
 
 // Some Routes Here
 
@@ -15,4 +18,4 @@ app.get('/', (req, res) => {
 
 app.use('/dinos', require('./routes/dinos'));
 
-app.listen(3000, () => { console.log("You ae listening on port 3000")});
+app.listen(3000, () => { console.log("You are listening on port 3000")});

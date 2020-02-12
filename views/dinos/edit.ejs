@@ -1,1 +1,11 @@
-<h2>Here's a form to edit a Dino</h2>
+<h2>Here's a form to edit a Dino<%= dino.name %></h2>
+
+<form action="/dinos/<%= dino.id %>/?_method=PUT"" method="POST">
+    <label for="dino-type">Type:</label>
+    <input type="text" name="type" id="dino-type" value="<%= dino.type %>">
+
+    <label for="dino-name">Name:</label>
+    <input type="text" name="name" id="dino-name" value="<%= dino.name %>">
+
+    <input type="submit" value="Edit that Dino!">
+</form>
