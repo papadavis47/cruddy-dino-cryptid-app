@@ -1,8 +1,8 @@
-<h2>Here's a form to edit a Cryptid<%= crypt.name %></h2>
+<h2>Here's a form to edit a <%= crypt.name %></h2>
 
-<form action="/cryptids/<%= crypt.id %>/?_method=PUT" method="POST">
+<form action="/cryptids/<%= crypts.id %>/?_method=PUT" method="POST">
     <label for="crypt-type">Image:</label>
-    <input type="text" name="type" id="dino-type" value="<%= crypt.img_url %>">
+    <input type="text" name="image" id="crypt-type" value="Image URL">
 
     <label for="crypt-name">Name:</label>
     <input type="text" name="name" id="crypt-name" value="<%= crypt.name %>">

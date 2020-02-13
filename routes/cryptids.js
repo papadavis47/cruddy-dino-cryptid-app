@@ -75,7 +75,7 @@ router.put('/:id', (req, res) => {
     // change the name of dino at index
     crypts[parseInt(req.params.id)] = req.body;
 
-    fs.writeFileSync('./cryptids.json', JSON.stringify(dinos));
+    fs.writeFileSync('./cryptids.json', JSON.stringify(crypts));
 
     res.redirect(`/cryptids/${req.params.id}`);
 });
