@@ -24,7 +24,6 @@ router.get('/new', (req, res) => {
 
 // CREATE - POST
 router.post('/', (req, res) => {
-    console.log("It Worked");
     console.log(req.body);
     // Read Dinos
     let dinos = fs.readFileSync('./dinosaurs.json');
@@ -50,6 +49,7 @@ router.get('/:id', (req, res) => {
     let dinoData = JSON.parse(dinos);
     let dinoIndex = parseInt(req.params.id);
     let oneDino = dinoData[dinoIndex];
+    oneDino.id = dinoIndex;
 
     res.render('dinos/show', {dino: oneDino});
 });
@@ -64,8 +64,8 @@ router.get('/edit/:id', (req, res) => {
     let oneDino = dinos[dinoIndex];
     oneDino.id = dinoIndex;
 
-    res.render('dinos/edit',  {dino: {id: req.params.id}});
-});
+    res.render('dinos/edit',  {dino: oneDino});
+}); 
 
 // UPDATE - PUT
 router.put('/:id', (req, res) => {

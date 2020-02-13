@@ -1,1 +1,22 @@
-[{"type":"BigBoy","name":"Bigfoot"},{"type":"FromCalifornia","name":"Lucy"},{"name":"Ducky","type":"saurolophus"},{"name":"Petrie","type":"pteranodon"},{"name":"Spike","type":"stegosaurus"}]
+[
+    {
+      "name": "Littlefoot",
+      "type": "Apatosaurus"
+    },
+    {
+      "name": "Cera",
+      "type": "Triceratops"
+    },
+    {
+      "name": "Ducky",
+      "type": "Saurolophus"
+    },
+    {
+      "name": "Petrie",
+      "type": "Pteranodon"
+    },
+    {
+      "name": "Spike",
+      "type": "Stegosaurus"
+    }
+  ]

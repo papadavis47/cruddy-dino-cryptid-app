@@ -17,5 +17,6 @@ app.get('/', (req, res) => {
 // Import controllers
 
 app.use('/dinos', require('./routes/dinos'));
+app.use('/cryptids', require('./routes/cryptids'));
 
 app.listen(3000, () => { console.log("You are listening on port 3000")});
